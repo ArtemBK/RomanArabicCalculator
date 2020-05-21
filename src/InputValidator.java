@@ -12,6 +12,12 @@ public class InputValidator {
     public boolean isFormatCorrect(String[] arithmeticExpression) {
         if(arithmeticExpression.length != 3){
             return false;
+        } else {
+            for (String s : arithmeticExpression) {
+                if(s.isEmpty()){
+                    return false;
+                }
+            }
         }
         return true;
     }
